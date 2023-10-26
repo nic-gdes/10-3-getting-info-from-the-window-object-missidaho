@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Window Object</title>
+    <style>
+        body {
+          margin: 0;
+        }
+        div {
+            width: 500px;
+            height: 500px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    
+
+    <script>
+const container = document.querySelector('div');
+let winWidth = window.innerWidth;
+let winHeight = window.innerHeight;
+console.log(winWidth,winHeight);
+
+container.style.width = winWidth + 'px';
+container.style.height = winHeight + 'px';
+
+// window.addEventListener('resize', function(e){
+//     console.log.e
+// }) 
+
+window.onresize = function() {
+  winWidth = window.innerWidth;
+  winHeight = window.innerHeight;
+  container.style.width = winWidth + 'px';
+  container.style.height = winHeight + 'px';
+}
+    </script>
+</body>
+</html>  
